@@ -1,0 +1,55 @@
+{
+  "name": "dns-fast-resolver",
+  "version": "1.0.0",
+  "description": "A custom `dns.lookup` based on dns resolver with timeout and cancellation handlers",
+  "main": "index.js",
+  "engines": {
+    "node": ">=12"
+  },
+  "scripts": {
+    "lint": "eslint ./",
+    "tests": "yarn run unit-test",
+    "test": "NODE_ENV=test mocha --parallel --config tests/.mocharc.jsonc -R spec ./tests/Unit/**",
+    "unit-test": "NODE_ENV=test nyc --reporter=html --reporter=text mocha --reporter=lcovonly --config tests/.mocharc.jsonc -R spec ./tests/Unit/**",
+    "coveralls": "NODE_ENV=test nyc report --reporter=text-lcov | coveralls  && rm -rf ./coverage  && rm -rf ./.nyc_output/*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/boseca/dns-fast-resolver.git"
+  },
+  "keywords": [
+    "dns",
+    "lookup",
+    "resolve",
+    "resolve4",
+    "resolve6",
+    "ipv4",
+    "ipv6",
+    "net",
+    "connect",
+    "socket",
+    "request"
+  ],
+  "author": "Bose Jankulovski",
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "^4.17.20"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "coveralls": "^3.1.0",
+    "eslint": "^7.12.1",
+    "eslint-config-standard": "^15.0.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.2",
+    "mocha": "^8.2.0",
+    "mocha-lcov-reporter": "^1.3.0",
+    "nyc": "^15.1.0"
+  },
+  "bugs": {
+    "url": "https://github.com/boseca/dns-fast-resolver/issues"
+  },
+  "homepage": "https://github.com/boseca/dns-fast-resolver"
+}
