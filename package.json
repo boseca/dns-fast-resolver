@@ -1,6 +1,6 @@
 {
   "name": "dns-fast-resolver",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A custom `dns.lookup` based on dns resolver with timeout and cancellation handlers",
   "main": "index.js",
   "engines": {
@@ -8,10 +8,9 @@
   },
   "scripts": {
     "lint": "eslint ./",
-    "tests": "yarn run unit-test",
-    "test": "NODE_ENV=test mocha --parallel --config tests/.mocharc.jsonc -R spec ./tests/Unit/**",
-    "unit-test": "NODE_ENV=test nyc --reporter=html --reporter=text mocha --reporter=lcovonly --config tests/.mocharc.jsonc -R spec ./tests/Unit/**",
-    "coveralls": "NODE_ENV=test nyc report --reporter=text-lcov | coveralls  && rm -rf ./coverage  && rm -rf ./.nyc_output/*"
+    "test": "NODE_ENV=test mocha -R spec --parallel --config tests/.mocharc.jsonc ./tests/Unit/**",
+    "unit-test": "NODE_ENV=test nyc -r html -r lcov -r text mocha -R lcovonly -R spec --config tests/.mocharc.jsonc ./tests/Unit/**",
+    "coveralls-dev-push": "NODE_ENV=test nyc report --reporter=text-lcov | coveralls  && rm -rf ./coverage  && rm -rf ./.nyc_output/*"
   },
   "repository": {
     "type": "git",

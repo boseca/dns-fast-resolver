@@ -5,7 +5,7 @@ Under the hood, this function performs a DNS query on the network and the result
 
 [![NPM version](https://img.shields.io/npm/v/dns-fast-resolver.svg)](https://www.npmjs.com/package/dns-fast-resolver)
 [![Release Status](https://github.com/boseca/dns-fast-resolver/workflows/npm%20release/badge.svg)](https://github.com/boseca/dns-fast-resolver/releases)
-[![Build Status](https://travis-ci.org/boseca/dns-fast-resolver.svg?branch=main)](https://travis-ci.org/boseca/dns-fast-resolver)
+[![Build Status](https://github.com/boseca/dns-fast-resolver/workflows/build/badge.svg)](https://github.com/boseca/dns-fast-resolver/actions?query=workflow%3Abuild)
 [![Coverage Status](https://coveralls.io/repos/github/boseca/dns-fast-resolver/badge.svg?branch=main)](https://coveralls.io/github/boseca/dns-fast-resolver?branch=main)
 
 
